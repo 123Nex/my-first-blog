@@ -5,8 +5,14 @@
     </head>
 <body>
     <h1>Django</h1>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <p>{% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}</p>
+    <p></p>
 
 </body>
 </html>
